@@ -20,6 +20,13 @@ $mq-breakpoints: (
 @import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap");
 @import "~sass-mq";
 @import "~rfs/scss";
+@import "~input-range-scss";
+
+:root {
+  --max-width: 960px;
+  --font-size: 1rem;
+  --background-color: #1b9cfc;
+}
 
 html {
   background-color: $beige;
@@ -158,6 +165,31 @@ body {
       bottom: calc(50% - 0.1vh);
       background-color: $red;
       z-index: 1;
+    }
+  }
+}
+
+.css-varaibles {
+  .label {
+    color: $white;
+  }
+
+  .control {
+    min-width: 400px;
+    width: 100%;
+  }
+
+  .container {
+    @include font-size(var(--font-size));
+    background-color: var(--background-color);
+    border-radius: 4px;
+    max-width: var(--max-width);
+    padding: 20px;
+    width: 100%;
+
+    p {
+      mix-blend-mode: difference;
+      filter: drop-shadow(0.05em 0.05em $green);
     }
   }
 }

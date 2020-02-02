@@ -19,6 +19,9 @@ export default () => {
           <li>
             <Link to="/day-02">Day 2</Link>
           </li>
+          <li>
+            <Link to="/day-03">Day 3</Link>
+          </li>
         </ul>
       </div>
     </div>
